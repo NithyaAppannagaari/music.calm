@@ -8,56 +8,96 @@
 import UIKit
 import HealthKit
 
+var prevHeartBeat = 98
+
 class HomePageViewController: UIViewController {
     
     var pauseCount = 0
     
-    let healthStore = HKHealthStore()
-
+    @IBOutlet weak var heartBeat: UIBarButtonItem!
+    
+    var state = HeartState.stressed
+    
+  
+    
+    var prevState = HeartState.stressed
+    
+    enum HeartState {
+        case anxious, stressed, normal
+    }
+    
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeHealthkit()
+        
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.setHeartBeat()
+            })
 
         // Do any additional setup after loading the view.
     }
     
-    func authorizeHealthkit(){
-        let read = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        let share = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-
-        healthStore.requestAuthorization(toShare: share, read: read) { (chk, error) in
-            if(chk){
-                print("permission granted")
-                self.latestHeartRate()
+    // create method that returns the current heartbeat
+    
+    func setHeartBeat()
+    {
+        var num = 0
+        // default - 70 bpm
+        
+        // states:
+        // anxious --> >120
+        // stress --> 90-120
+        // normal --> <90
+        
+        if (state == prevState) {
+            num = Int.random(in: prevHeartBeat-5...prevHeartBeat+5)
+            if (state == HeartState.normal) {
+                if (num >= 90) {
+                    prevState = state
+                    state = HeartState.stressed
+                }
+            }
+            else if (state == HeartState.stressed) {
+                if (num <= 90) {
+                    prevState = state
+                    state = HeartState.normal
+                }
+                else if (num >= 120) {
+                    prevState = state
+                    state = HeartState.anxious
+                }
+            }
+            else {
+                if (num <= 120) {
+                    prevState = state
+                    state = HeartState.stressed
+                }
+                else if (num >= 250) {
+                    num = 240
+                }
             }
         }
         
-    }
-    
-    func latestHeartRate() {
-        guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
-            return
-        }
-        
-        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        
-        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate , limit: Int(HKObjectQueryNoLimit) , sortDescriptors: [sortDescriptor]) { (sample, result, error) in
-            guard error == nil else{
-                return
+        else {
+            if (state == HeartState.anxious) {
+                num = Int.random(in: 120...250)
+                prevState = HeartState.anxious
             }
-            
-            let data = result![0] as! HKQuantitySample
-            let unit = HKUnit(from: "count/min")
-            let latestHr = data.quantity.doubleValue(for: unit)
-            print("Latest HR\(latestHr) BPM")
+            else if (state == HeartState.stressed) {
+                num = Int.random(in: 90...120)
+                prevState = HeartState.stressed
+            }
+            else {
+                num = Int.random(in: 50...90)
+                prevState = HeartState.normal
+            }
         }
         
-        healthStore.execute(query)
+        prevHeartBeat = num
+        heartBeat.title = String(num)
     }
-    
+  
     @IBAction func openInsta(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(URL(string: "https://www.instagram.com/music.calm2023/")! as URL, options: [:], completionHandler: nil)
     }

@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6D483E2959081200550264 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D483D2959081200550264 /* SignInViewController.swift */; };
+		9B6D48402959081E00550264 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D483F2959081E00550264 /* LogInViewController.swift */; };
+		9B6D4848295913D000550264 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D4847295913D000550264 /* TabBarViewController.swift */; };
 		9B855DF229407DB000EE8490 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9B855DF129407DB000EE8490 /* Base.lproj */; };
 		9B855DF729407DD500EE8490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B855DF329407DD500EE8490 /* LaunchScreen.storyboard */; };
 		9B855DF829407DD500EE8490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B855DF529407DD500EE8490 /* Main.storyboard */; };
+		9B8B497F295C0E720060AB8C /* Accounts in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B497E295C0E720060AB8C /* Accounts */; };
+		9B8B4981295C0E7C0060AB8C /* Passwords in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B4980295C0E7C0060AB8C /* Passwords */; };
+		9B8B4982295C10B00060AB8C /* Coyote-SemiBoldDEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6D48372957C0A700550264 /* Coyote-SemiBoldDEMO.otf */; };
+		9B8B4983295C10B20060AB8C /* Coyote-SemiBoldDEMO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6D48382957C0A700550264 /* Coyote-SemiBoldDEMO.ttf */; };
 		9B9499E52941E2670081391B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9499E42941E2670081391B /* Assets.xcassets */; };
 		9B9499E72941E2EA0081391B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9499E62941E2EA0081391B /* AppDelegate.swift */; };
 		9B9499E92941E3730081391B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9499E82941E3730081391B /* HomePageViewController.swift */; };
@@ -28,9 +35,14 @@
 		9B6D48382957C0A700550264 /* Coyote-SemiBoldDEMO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coyote-SemiBoldDEMO.ttf"; sourceTree = "<group>"; };
 		9B6D48392957C0A700550264 /* license_COYOTE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = license_COYOTE.rtf; sourceTree = "<group>"; };
 		9B6D483A2957C0A700550264 /* coyote_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coyote_header.png; sourceTree = "<group>"; };
+		9B6D483D2959081200550264 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9B6D483F2959081E00550264 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9B6D4847295913D000550264 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9B855DF129407DB000EE8490 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		9B855DF429407DD500EE8490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B855DF629407DD500EE8490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B8B497E295C0E720060AB8C /* Accounts */ = {isa = PBXFileReference; lastKnownFileType = text; path = Accounts; sourceTree = "<group>"; };
+		9B8B4980295C0E7C0060AB8C /* Passwords */ = {isa = PBXFileReference; lastKnownFileType = text; path = Passwords; sourceTree = "<group>"; };
 		9B9499E42941E2670081391B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B9499E62941E2EA0081391B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9499E82941E3730081391B /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,11 @@
 				9B855DF529407DD500EE8490 /* Main.storyboard */,
 				9B855DF329407DD500EE8490 /* LaunchScreen.storyboard */,
 				9BC59A3229406E670059F8B7 /* Info.plist */,
+				9B6D483D2959081200550264 /* SignInViewController.swift */,
+				9B6D483F2959081E00550264 /* LogInViewController.swift */,
+				9B6D4847295913D000550264 /* TabBarViewController.swift */,
+				9B8B497E295C0E720060AB8C /* Accounts */,
+				9B8B4980295C0E7C0060AB8C /* Passwords */,
 			);
 			path = MusicCalmMac;
 			sourceTree = "<group>";
@@ -163,10 +180,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8B497F295C0E720060AB8C /* Accounts in Resources */,
 				9B855DF829407DD500EE8490 /* Main.storyboard in Resources */,
+				9B8B4982295C10B00060AB8C /* Coyote-SemiBoldDEMO.otf in Resources */,
 				9B855DF729407DD500EE8490 /* LaunchScreen.storyboard in Resources */,
+				9B8B4981295C0E7C0060AB8C /* Passwords in Resources */,
 				9B855DF229407DB000EE8490 /* Base.lproj in Resources */,
 				9B9499E52941E2670081391B /* Assets.xcassets in Resources */,
+				9B8B4983295C10B20060AB8C /* Coyote-SemiBoldDEMO.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,11 +200,14 @@
 			files = (
 				9B9499EB2941E3C60081391B /* CalendarViewController.swift in Sources */,
 				9B9499E92941E3730081391B /* HomePageViewController.swift in Sources */,
+				9B6D4848295913D000550264 /* TabBarViewController.swift in Sources */,
 				9B9499E72941E2EA0081391B /* AppDelegate.swift in Sources */,
 				9B9499ED2941E42E0081391B /* MusicGameViewController.swift in Sources */,
 				9B9499F22941E4780081391B /* WaveViewController.swift in Sources */,
+				9B6D483E2959081200550264 /* SignInViewController.swift in Sources */,
 				9B9499F52941E52E0081391B /* SignInPageViewController.swift in Sources */,
 				9BC59A2729406E650059F8B7 /* SceneDelegate.swift in Sources */,
+				9B6D48402959081E00550264 /* LogInViewController.swift in Sources */,
 				9B9499EF2941E43C0081391B /* MusicTuningViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

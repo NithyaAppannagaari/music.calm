@@ -10,12 +10,29 @@ import UIKit
 class MusicGameViewController: UIViewController {
     
     var pauseCount = 0
-
+    
+    @IBOutlet weak var gameHeartBeat: UIBarButtonItem!
+    
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.setHeartBeat()
+            })
 
         // Do any additional setup after loading the view.
     }
+    
+    // create method that returns the current heartbeat
+    
+    func setHeartBeat()
+    {
+        gameHeartBeat.title = String(prevHeartBeat)
+    }
+    
+    // create method that returns the current heartbeat
     
     @IBAction func openInsta(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(URL(string: "https://www.instagram.com/music.calm2023/")! as URL, options: [:], completionHandler: nil)
