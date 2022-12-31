@@ -14,10 +14,21 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initializeHideKeyboard()
 
         // Do any additional setup after loading the view.
     }
     
+    func initializeHideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
+    }
 
     @IBAction func signIn(_ sender: UIButton) {
         var accountName = ""
@@ -66,12 +77,15 @@ class LogInViewController: UIViewController {
             
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarID") as? TabBarViewController
             self.navigationController?.pushViewController(vc!, animated: true)
+            
+            print(accountsArray)
         }
         
         else
         {
             sender.layer.borderColor = UIColor.red.cgColor
             sender.layer.borderWidth = 2
+            print(accountsArray)
         }
      }
      // MARK: - Navigation

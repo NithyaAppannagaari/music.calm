@@ -37,7 +37,7 @@ class MusicTuningViewController: UIViewController {
     @IBAction func openInsta(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(URL(string: "https://www.instagram.com/music.calm2023/")! as URL, options: [:], completionHandler: nil)
     }
-    
+    @available(iOS 13.0, *)
     @IBAction func pauseOrPlay(_ sender: UIBarButtonItem) {
         pauseCount+=1
         

@@ -17,12 +17,26 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initializeHideKeyboard()
         // Do any additional setup after loading the view.
+    }
+    
+    func initializeHideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
     }
     
     @IBAction func createAccount(_ sender: Any) {
         var name = username.text!
         var pass = password.text!
+        print(name)
+        print(pass)
         writeFile(file: "Accounts", stringData: name)
         writeFile(file: "Passwords", stringData: pass)
         
@@ -32,29 +46,31 @@ class SignInViewController: UIViewController {
     
     // create function to write to file
     func writeFile(file: String, stringData: String) {
+        print("writing")
         
         // get the fileURL
         let toWrite = "\n" + stringData
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(file)
 
-        if let handle = try? FileHandle(forWritingTo: path){
+      /*  if let handle = try? FileHandle(forWritingTo: path){
             handle.seekToEndOfFile()
             handle.write(toWrite.data(using: .utf8)!)
             handle.closeFile()
-        }
+        }*/
         
         do{
-            let fileData = try Data(contentsOf: path)
+            try toWrite.write(to: path, atomically: false, encoding: .utf8)
+          /*  let fileData = try Data(contentsOf: path)
             let stringFromData = String(data: fileData, encoding: .utf8)
             
-            print(stringFromData)
+            print(stringFromData)*/
         }
         catch {
             print("error")
         }
     }
-  
+      
     /*
     // MARK: - Navigation
 
