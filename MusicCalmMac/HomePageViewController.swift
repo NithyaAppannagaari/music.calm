@@ -15,8 +15,10 @@ enum HeartState {
 
 var state = HeartState.stressed
 
-var heartBeatNum = 0
+var heartBeatNums = [Int]()
 var player: AVAudioPlayer?
+
+
 /*
  To-Do for AI Generation of Music
  * play same music on all pages (AVAudioPlayer)
@@ -26,39 +28,70 @@ var player: AVAudioPlayer?
  */
 @available(iOS 13.0, *)
 class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
-    
-  
-    
+        
     var pauseCount = 0
-    
-    @IBOutlet weak var heartBeat: UIBarButtonItem!
-    
+        
   var timer = Timer()
     
+    var heartCount = 0
+    
   var timerHeart = Timer()
+    @IBOutlet weak var heartBeat: UIBarButtonItem!
     
     let songs = ["gameMusic", "gameMusic2", "gameMusic3"] // store all 60 audio files in here
     // indices:
     // 0-3 --> normal and classical
     // 4-7 -->
-    let healthStore = HealthKitInterface()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let healthStore = HealthKitInterface(self)
+        healthStore.readHeartRateData()
         self.setHeartBeat()
-        
         playSong()
-
-        self.timerHeart = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-            self.healthStore.readHeartRateData()
-           })
-    }
+        timerHeart = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
+                    self.setHeartBeat()
+                }
+               
+        }
+    
+        
     
     func setHeartBeat()
     {
-        healthStore.readHeartRateData()
+       // heartBeat.title = String(heartBeatNum)
         
-       
+        print("setting heart beat")
+        
+        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+        {
+            let num = heartBeatNums[heartCount]
+            
+            heartBeat?.title = String(num)
+            
+            print("title is \(num)")
+            
+            if(num < 90) {
+                state = HeartState.normal
+            }
+            
+            else if(num >= 90 && num < 120)
+            {
+                state = HeartState.stressed
+            }
+            
+            else
+            {
+                state = HeartState.anxious
+            }
+            
+            heartCount+=1
+            
+            if(heartCount >= heartBeatNums.count){
+                timerHeart.invalidate()
+            }
+        }
     }
     
     func playSong()
@@ -109,6 +142,7 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
     func stopStong()
     {
         player?.stop()
+
     }
     @IBAction func openInsta(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(URL(string: "https://www.instagram.com/music.calm2023/")! as URL, options: [:], completionHandler: nil)

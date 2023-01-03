@@ -408,24 +408,17 @@
                             </barButtonItem>
                             <barButtonItem title="heartbeat" image="suit.heart.fill" catalog="system" id="Hyb-Sk-JJc">
                                 <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="homeHeartBeat:" destination="DOP-8T-qNT" id="ZN5-Qo-Mat"/>
-                                </connections>
                             </barButtonItem>
-                            <barButtonItem title="98" style="plain" id="aPO-og-QOm">
+                            <barButtonItem title="98" style="plain" id="JGi-Ej-a0y">
                                 <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="homeHeartBeat:" destination="DOP-8T-qNT" id="r6f-ne-Gdm"/>
-                                </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="heartBeat" destination="aPO-og-QOm" id="Zd6-Pb-5aE"/>
+                        <outlet property="heartBeat" destination="JGi-Ej-a0y" id="BgG-J6-SvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzj-iG-36D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="DOP-8T-qNT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3999.2366412213737" y="843.66197183098598"/>
         </scene>

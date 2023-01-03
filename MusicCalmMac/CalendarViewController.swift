@@ -12,6 +12,8 @@ import HealthKit
 class CalendarViewController: UIViewController {
         
     var pauseCount = 0
+    
+    var heartCount: Int = 0
         
     @IBOutlet weak var calendarHeartBeat: UIBarButtonItem!
     
@@ -19,20 +21,63 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
-        self.setHeartBeat()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
-            self.setHeartBeat()
-            })
+        
+       //.setHeartBeat()
+       
      //   authorizeHealthKit()
       
         // Do any additional setup after loading the view.
     }
     
+    override func loadView()
+    {
+        super.loadView()
+        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
+                    self.setHeartBeat()
+                }
+    }
+    
+    func setHeartBeat()
+    {
+       // heartBeat.title = String(heartBeatNum)
+        
+        print("setting heart beat")
+        
+        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+        {
+            let num = heartBeatNums[heartCount]
+            
+            calendarHeartBeat?.title = String(num)
+            
+            print("title is \(num)")
+            
+            if(num < 90) {
+                state = HeartState.normal
+            }
+            
+            else if(num >= 90 && num < 120)
+            {
+                state = HeartState.stressed
+            }
+            
+            else
+            {
+                state = HeartState.anxious
+            }
+            
+            heartCount+=1
+            
+            if(heartCount >= heartBeatNums.count){
+                timer.invalidate()
+            }
+        }
+    }
 
     // create method that returns the current heartbeat
     
-    func setHeartBeat()
+  /*  func setHeartBeat()
     {
         calendarHeartBeat.title = String(heartBeatNum)
         
@@ -49,7 +94,7 @@ class CalendarViewController: UIViewController {
         {
             state = HeartState.anxious
         }
-    }
+    }*/
     // create method that returns the current heartbeat
     
   

@@ -12,23 +12,33 @@ class WaveViewController: UIViewController {
     
     @IBOutlet weak var calmHeartBeat: UIBarButtonItem!
     var pauseCount = 0
+    var heartCount: Int = 0
 
     var timer = Timer()
+    
+    override func loadView()
+    {
+        super.loadView()
+        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
+                    self.setHeartBeat()
+                }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        self.setHeartBeat()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
-            self.setHeartBeat()
-            })
+        
+      //  self.setHeartBeat()
+     //   self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
+        //    self.setHeartBeat()
+        //    })
 
         // Do any additional setup after loading the view.
     }
     
     // create method that returns the current heartbeat
     
-    func setHeartBeat()
+ /*   func setHeartBeat()
     {
         calmHeartBeat.title = String(heartBeatNum)
         
@@ -44,6 +54,42 @@ class WaveViewController: UIViewController {
         else
         {
             state = HeartState.anxious
+        }
+    }*/
+    
+    func setHeartBeat()
+    {
+       // heartBeat.title = String(heartBeatNum)
+        
+        print("setting heart beat")
+        
+        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+        {
+            let num = heartBeatNums[heartCount]
+            
+            calmHeartBeat?.title = String(num)
+            
+            print("title is \(num)")
+            
+            if(num < 90) {
+                state = HeartState.normal
+            }
+            
+            else if(num >= 90 && num < 120)
+            {
+                state = HeartState.stressed
+            }
+            
+            else
+            {
+                state = HeartState.anxious
+            }
+            
+            heartCount+=1
+            
+            if(heartCount >= heartBeatNums.count){
+                timer.invalidate()
+            }
         }
     }
     
