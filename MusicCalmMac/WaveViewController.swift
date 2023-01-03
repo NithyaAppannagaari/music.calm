@@ -18,7 +18,8 @@ class WaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+        self.setHeartBeat()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
             self.setHeartBeat()
             })
 
@@ -29,7 +30,21 @@ class WaveViewController: UIViewController {
     
     func setHeartBeat()
     {
-        calmHeartBeat.title = String(prevHeartBeat)
+        calmHeartBeat.title = String(heartBeatNum)
+        
+        if(heartBeatNum < 90) {
+            state = HeartState.normal
+        }
+        
+        else if(heartBeatNum >= 90 && heartBeatNum < 120)
+        {
+            state = HeartState.stressed
+        }
+        
+        else
+        {
+            state = HeartState.anxious
+        }
     }
     
     @IBAction func openInsta(_ sender: UIBarButtonItem) {

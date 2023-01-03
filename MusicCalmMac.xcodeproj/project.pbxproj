@@ -71,8 +71,8 @@
 		9BB06DE42960145900FE6C04 /* gameMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic3.mp3; sourceTree = "<group>"; };
 		9BB06DE6296018CD00FE6C04 /* Accounts */ = {isa = PBXFileReference; lastKnownFileType = text; path = Accounts; sourceTree = "<group>"; };
 		9BB06DE8296018D700FE6C04 /* Passwords */ = {isa = PBXFileReference; lastKnownFileType = text; path = Passwords; sourceTree = "<group>"; };
-		9BB06E022960344A00FE6C04 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicCalmMac.app; path = "/Users/nithyaappannagaari/Downloads/MusicCalmMac/build/Debug-iphoneos/MusicCalmMac.app"; sourceTree = "<absolute>"; };
 		9BB06E0329603B9E00FE6C04 /* HealthKitInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitInterface.swift; sourceTree = "<group>"; };
+		9BB06E252963647E00FE6C04 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicCalmMac.app; path = "/Users/nithyaappannagaari/Downloads/MusicCalmMac/build/Debug-iphoneos/MusicCalmMac.app"; sourceTree = "<absolute>"; };
 		9BC59A2629406E650059F8B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9BC59A3229406E670059F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,7 @@
 			);
 			name = MusicCalmMac;
 			productName = MusicCalmMac;
-			productReference = 9BB06E022960344A00FE6C04 /* MusicCalmMac.app */;
+			productReference = 9BB06E252963647E00FE6C04 /* MusicCalmMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

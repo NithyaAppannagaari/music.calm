@@ -421,7 +421,7 @@
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="heartBeat" destination="aPO-og-QOm" id="BCT-Rh-TXZ"/>
+                        <outlet property="heartBeat" destination="aPO-og-QOm" id="Zd6-Pb-5aE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzj-iG-36D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -636,7 +636,7 @@
                         <viewLayoutGuide key="safeArea" id="Reu-bJ-3hf"/>
                         <color key="backgroundColor" red="0.54117647058823526" green="0.80392156862745101" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="ACS-Mm-Lhy">
+                    <navigationItem key="navigationItem" id="ACS-Mm-Lhy">
                         <leftBarButtonItems>
                             <barButtonItem title="Item" image="-51609193448mids70tdmp" width="100" id="fZt-dx-7lp">
                                 <inset key="imageInsets" minX="-71" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -677,7 +677,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-UJ-6Ag">
-                                <rect key="frame" x="144" y="161" width="104" height="45"/>
+                                <rect key="frame" x="140" y="118" width="112" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Game">
@@ -689,8 +689,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTn-Fq-3F3">
-                                <rect key="frame" x="38" y="231" width="316" height="80"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7r9-Dd-UDx">
+                                <rect key="frame" x="0.0" y="103" width="393" height="727"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="kgP-qm-aKh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cRJ-Vz-ttV"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTn-Fq-3F3">
+                                <rect key="frame" x="38" y="171" width="316" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="learn tempo, improve your concentration, and click on the key when it">
@@ -982,7 +988,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-gs-rVA">
-                                <rect key="frame" x="144" y="361" width="104" height="59"/>
+                                <rect key="frame" x="144" y="342" width="104" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -997,34 +1003,16 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="UZk-7C-e9Y"/>
                         <color key="backgroundColor" red="0.54117647058823526" green="0.80392156862745101" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="yIl-0M-M07">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Item" image="-51609193448mids70tdmp" width="100" id="0nz-5o-W7R">
-                                <inset key="imageInsets" minX="-71" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="openInsta:" destination="jdW-PA-Nic" id="ubJ-Qi-Eze"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="pause" style="plain" id="GlF-XP-tw9">
-                                <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
-                                <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </barButtonItem>
-                            <barButtonItem title="heartbeat" image="suit.heart.fill" catalog="system" id="ubt-3V-oIa">
-                                <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </barButtonItem>
-                            <barButtonItem title="98" style="plain" id="v1y-TL-Pgp">
-                                <color key="tintColor" red="1" green="0.99215686270000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" style="editor" id="ZIF-PL-QLi"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fifthBlack" destination="SQ0-R3-JOs" id="sVA-lp-djZ"/>
                         <outlet property="firstBlack" destination="0Xx-pM-syy" id="Hv1-xM-rB3"/>
                         <outlet property="fourthBlack" destination="zqA-wM-jMi" id="0FZ-sn-ctb"/>
-                        <outlet property="gameHeartBeat" destination="v1y-TL-Pgp" id="gsV-0d-R4a"/>
                         <outlet property="keyA" destination="UcI-JR-dVP" id="icq-CL-lHp"/>
                         <outlet property="keyB" destination="UsZ-AT-HNz" id="nFA-lM-GX6"/>
                         <outlet property="keyC" destination="PJC-hr-IZQ" id="KPE-px-Ae7"/>
@@ -1032,7 +1020,6 @@
                         <outlet property="keyE" destination="SxG-pI-TY1" id="3bS-fM-foL"/>
                         <outlet property="keyF" destination="vJB-ia-ui4" id="P64-Wl-dhe"/>
                         <outlet property="keyG" destination="pVz-lZ-RJm" id="6JJ-UY-rHg"/>
-                        <outlet property="pauseButton" destination="GlF-XP-tw9" id="VAc-gB-se6"/>
                         <outlet property="secondBlack" destination="X9b-tt-hel" id="Xiu-Jw-8OU"/>
                         <outlet property="startButton" destination="KK4-gs-rVA" id="Lb3-jd-5CS"/>
                         <outlet property="thirdBlack" destination="s0m-cr-MUx" id="In3-Mc-K7g"/>

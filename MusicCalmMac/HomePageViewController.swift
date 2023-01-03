@@ -7,160 +7,109 @@
 
 import UIKit
 import HealthKit
-import CoreBluetooth
+import AVFoundation
 
-var prevHeartBeat = 98
+enum HeartState {
+    case anxious, stressed, normal
+}
+
+var state = HeartState.stressed
 
 var heartBeatNum = 0
-
-
-class HomePageViewController: UIViewController {
+var player: AVAudioPlayer?
+/*
+ To-Do for AI Generation of Music
+ * play same music on all pages (AVAudioPlayer)
+ * use python to train AI models to make music in 5 genres, and 3 levels per genre. 15 sections, 4 songs per section.
+ * make sure songs generated flow into each other for different levels
+ * categorize each audio file into their respective section
+ */
+@available(iOS 13.0, *)
+class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
+    
+  
     
     var pauseCount = 0
     
     @IBOutlet weak var heartBeat: UIBarButtonItem!
     
-    var state = HeartState.stressed
-    
-    var prevState = HeartState.stressed
-    
-    enum HeartState {
-        case anxious, stressed, normal
-    }
-    
   var timer = Timer()
     
- //   let healthStore = HKHealthStore()
+  var timerHeart = Timer()
     
-    let healthKitInterface = HealthKitInterface()
-   
+    let songs = ["gameMusic", "gameMusic2", "gameMusic3"] // store all 60 audio files in here
+    // indices:
+    // 0-3 --> normal and classical
+    // 4-7 -->
+    let healthStore = HealthKitInterface()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.authorizeHealthkit()
-                
-                // STEP 1: create a concurrent background queue for the central
-              
-        healthKitInterface.readHeartRateData()
+        self.setHeartBeat()
         
-    self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-           self.setHeartBeat()
-           })
+        playSong()
 
-        // Do any additional setup after loading the view.
+        self.timerHeart = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.healthStore.readHeartRateData()
+           })
     }
-    
- /*   func deriveBeatsPerMinute(using heartRateMeasurementCharacteristic: CBCharacteristic) -> Int {
-        print("hello")
-            let heartRateValue = heartRateMeasurementCharacteristic.value!
-            let buffer = [UInt8](heartRateValue)
-     
-            if ((buffer[0] & 0x01) == 0) {
-                print("BPM is UInt8")
-                
-                // store heart rate data in HKHealthStore
-                healthKitInterface.writeHeartRateData(heartRate: Int(buffer[1]))
-               // heartBeat.title = String(Int(buffer[1]))
-             //   print(Int(buffer[1]))
-               // heartBeatNum = Int(buffer[1])
-                return Int(buffer[1])
-            } else {
-                print("BPM is UInt16")
-                return -1
-            }
-            
-        }*/
-    
-   /* func authorizeHealthkit() {
-        let read = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        let share = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        healthStore.requestAuthorization(toShare: share, read: read) { (chk, error) in
-            if(chk) {
-                print("permission granted")
-                self.latestHeartRate()
-            }
-        }
-    }
-    
-    func latestHeartRate() {
-        guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
-            return
-        }
-        
-        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
-        
-        let predicate = HKQuery.predicateForSamples(withStart: startDate , end: Date(), options: .strictEndDate)
-        
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        
-        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate , limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) { (sample, result, error) in
-            guard error == nil else{
-                return
-            }
-            
-            
-        }
-        healthStore.execute(query)
-    } */
     
     func setHeartBeat()
     {
-        /*var num = 0
-        // default - 70 bpm
+        healthStore.readHeartRateData()
         
-        // states:
-        // anxious --> >120
-        // stress --> 90-120
-        // normal --> <90
+       
+    }
+    
+    func playSong()
+    {
+        var songIndex = Int.random(in: 0...2)
         
-        if (state == prevState) {
-            num = Int.random(in: prevHeartBeat-5...prevHeartBeat+5)
-            if (state == HeartState.normal) {
-                if (num >= 90) {
-                    prevState = state
-                    state = HeartState.stressed
-                }
-            }
-            else if (state == HeartState.stressed) {
-                if (num <= 90) {
-                    prevState = state
-                    state = HeartState.normal
-                }
-                else if (num >= 120) {
-                    prevState = state
-                    state = HeartState.anxious
-                }
-            }
-            else {
-                if (num <= 120) {
-                    prevState = state
-                    state = HeartState.stressed
-                }
-                else if (num >= 250) {
-                    num = 240
-                }
-            }
+        /*
+        if (state == HeartState.normal) {
+            songIndex = Int.random(in: 0...19)
         }
-        
+        else if (state == HeartState.stressed) {
+            songIndex = Int.random(in: 20...39)
+        }
         else {
-            if (state == HeartState.anxious) {
-                num = Int.random(in: 120...250)
-                prevState = HeartState.anxious
-            }
-            else if (state == HeartState.stressed) {
-                num = Int.random(in: 90...120)
-                prevState = HeartState.stressed
-            }
-            else {
-                num = Int.random(in: 50...90)
-                prevState = HeartState.normal
-            }
+            songIndex = Int.random(in: 40...59)
         }
+         */
         
-        prevHeartBeat = num*/
-      //  heartBeat.title = String(self.deriveBeatsPerMinute(using: CBCharacteristic))
-        heartBeat.title = String(heartBeatNum)
+        let urlString = Bundle.main.path(forResource: songs[songIndex], ofType: "mp3")
+        
+        do {
+
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
+            }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            player?.delegate = self
+            
+            guard let player = player else {
+                return
+            }
+            
+            player.play()
+        } catch {
+            print("something went wrong")
+        }
+    
     }
   
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
+    {
+        playSong()
+    }
+    
+    func stopStong()
+    {
+        player?.stop()
+    }
     @IBAction func openInsta(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(URL(string: "https://www.instagram.com/music.calm2023/")! as URL, options: [:], completionHandler: nil)
     }
@@ -180,14 +129,4 @@ class HomePageViewController: UIViewController {
             sender.image = UIImage(systemName: "pause.circle")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

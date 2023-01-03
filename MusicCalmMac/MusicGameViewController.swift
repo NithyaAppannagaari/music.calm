@@ -15,8 +15,7 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
     
     var startCount = 0
    
-    var player: AVAudioPlayer?
-    
+   
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var keyB: UIButton!
     @IBOutlet weak var keyA: UIButton!
@@ -31,7 +30,6 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var fourthBlack: UIButton!
     @IBOutlet weak var thirdBlack: UIButton!
     @IBOutlet weak var secondBlack: UIButton!
-    var timer = Timer()
     var timerGame = Timer()
     
     @IBOutlet weak var pauseButton: UIBarButtonItem!
@@ -42,12 +40,14 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
     let pianoSongs = ["gameMusic", "gameMusic2", "gameMusic3"]
     
     let tempo = [0.5, 1.1, 0.83]
-    
+   
     //no penalty for the game!
     //just press the buttons and benefit from the music
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
+        
+        player?.pause()
         
         // start text for button
         startButton.titleLabel?.font = UIFont(name: "Coyote SemiBold DEMO", size: 18)
@@ -55,15 +55,10 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
         startButton.setTitle("start", for: .normal)
         
         //pause regular music
-        self.pauseButton.image = UIImage(systemName: "play.circle")
+        self.pauseButton?.image = UIImage(contentsOfFile: "play.circle")
         
         // hide back button
         self.navigationItem.setHidesBackButton(true, animated: false)
-        
-        //set timer to change heartbeat
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-            self.setHeartBeat()
-            })
         
         // set up keys in array
         self.Keys = [self.keyA, self.keyB, self.keyC, self.keyD, self.keyE, self.keyF, self.keyG,
@@ -74,6 +69,17 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        player?.pause()
+    }
+     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        HomePageViewController().playSong()
+    }
+    
+    
     @IBAction func buttonPressed(_ sender:  UIButton) {
         startCount = startCount + 1
         
@@ -83,7 +89,7 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
             for key in Keys {
                 key.isEnabled = true
             }
-            playSong()
+            self.playSong()
         }
         
         else
@@ -92,7 +98,7 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
             for key in Keys {
                 key.isEnabled = false
             }
-            stopSong()
+            self.stopSong()
         }
     }
     
@@ -145,11 +151,7 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
         self.timerGame = Timer.scheduledTimer(withTimeInterval: tempo[songIndex], repeats: true, block: { _ in self.highlightKey()})
     }
     
-    func setHeartBeat()
-    {
-        gameHeartBeat.title = String(prevHeartBeat)
-    }
-    
+   
     // this method gets called in accordance with the bpm of the song
     func highlightKey()
     {

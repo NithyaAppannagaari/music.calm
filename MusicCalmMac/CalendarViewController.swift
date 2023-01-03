@@ -20,7 +20,8 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+        self.setHeartBeat()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
             self.setHeartBeat()
             })
      //   authorizeHealthKit()
@@ -28,71 +29,26 @@ class CalendarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
- /*   func authorizeHealthKit(){
-        let read = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        let share = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        healthStore.requestAuthorization(toShare: share, read: read) { (chk, error) in
-            if(chk){
-                print("permission granted")
-                self.latestHeartRate()
-            }
-        }
-    }
-    */
-    
- /*   func latestHeartRate() {
-        guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
-            return
-        }
-        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {(sample, result, error) in
-            guard error == nil else{
-                return
-            }
-            /*let data = result?[0] as! HKQuantitySample
-            let unit = HKUnit(from: "count/min")
-            let latestHr = data.quantity.doubleValue(for: unit)
-            print("Latest Hr\(latestHr) BPM")*/
-        }
-        healthStore.execute(query)
-    }*/
-    
-  /*  /*Method to get todays heart rate - this only reads data from health kit. */
-     func getTodaysHeartRates() {
-        //predicate
-        let calendar = NSCalendar.current
-        let now = NSDate()
-        let components = calendar.dateComponents([.year, .month, .day], from: now as Date)
-        
-        guard let startDate:NSDate = calendar.date(from: components) as NSDate? else { return }
-        var dayComponent    = DateComponents()
-        dayComponent.day    = 1
-        let endDate:NSDate? = calendar.date(byAdding: dayComponent, to: startDate as Date) as NSDate?
-        let predicate = HKQuery.predicateForSamples(withStart: startDate as Date, end: endDate as Date?, options: [])
-
-        //descriptor
-        let sortDescriptors = [
-                                NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-                              ]
-        
-        heartRateQuery = HKSampleQuery(sampleType: heartRateType, predicate: predicate, limit: 25, sortDescriptors: sortDescriptors, resultsHandler: { (query, results, error) in
-            guard error == nil else { print("error"); return }
-
-            self.printHeartRateInfo(results: results)
-        }) //eo-query
-        
-        health.execute(heartRateQuery!)
-     }//eom
-*/
-    
 
     // create method that returns the current heartbeat
     
     func setHeartBeat()
     {
-        calendarHeartBeat.title = String(prevHeartBeat)
+        calendarHeartBeat.title = String(heartBeatNum)
+        
+        if(heartBeatNum < 90) {
+            state = HeartState.normal
+        }
+        
+        else if(heartBeatNum >= 90 && heartBeatNum < 120)
+        {
+            state = HeartState.stressed
+        }
+        
+        else
+        {
+            state = HeartState.anxious
+        }
     }
     // create method that returns the current heartbeat
     
