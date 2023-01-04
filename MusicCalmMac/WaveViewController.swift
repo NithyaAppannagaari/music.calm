@@ -103,11 +103,13 @@ class WaveViewController: UIViewController {
         if(pauseCount%2 == 1)
         {
             sender.image = UIImage(systemName: "play.circle")
+            player?.pause()
         }
         
         else
         {
             sender.image = UIImage(systemName: "pause.circle")
+            player?.play()
         }
     }
     /*

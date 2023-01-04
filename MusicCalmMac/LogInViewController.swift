@@ -42,6 +42,7 @@ class LogInViewController: UIViewController {
         // check if the read usernames + passwords exist in those arrays
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             
+            print("hello")
             let accountFileURL = dir.appendingPathComponent("Accounts")
             
             do{

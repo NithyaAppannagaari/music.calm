@@ -47,9 +47,18 @@ class SignInViewController: UIViewController {
     // create function to write to file
     func writeFile(file: String, stringData: String) {
         print("writing")
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL = documentDirectory.appendingPathComponent(file)
+        let content = stringData
         
+        if let handle = try? FileHandle(forWritingTo: fileURL) {
+            handle.seekToEndOfFile() // moving pointer to the end
+            handle.write("\n".data(using: .utf8)!)
+            handle.write(content.data(using: .utf8)!) // adding content
+            handle.closeFile() // closing the file
+        }
         // get the fileURL
-        let toWrite = "\n" + stringData
+       /* let toWrite = stringData
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(file)
 
@@ -68,7 +77,7 @@ class SignInViewController: UIViewController {
         }
         catch {
             print("error")
-        }
+        }*/
     }
       
     /*

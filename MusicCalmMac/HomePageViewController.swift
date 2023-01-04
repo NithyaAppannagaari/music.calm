@@ -25,6 +25,13 @@ var player: AVAudioPlayer?
  * use python to train AI models to make music in 5 genres, and 3 levels per genre. 15 sections, 4 songs per section.
  * make sure songs generated flow into each other for different levels
  * categorize each audio file into their respective section
+ 
+ * 5 genres
+ * R&B
+ * heavy metal
+ * classical
+ * pop
+ * hip hop
  */
 @available(iOS 13.0, *)
 class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
@@ -38,13 +45,43 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
   var timerHeart = Timer()
     @IBOutlet weak var heartBeat: UIBarButtonItem!
     
-    let songs = ["gameMusic", "gameMusic2", "gameMusic3"] // store all 60 audio files in here
+    // add 3 more songs to each one
+    let rbNorm = ["R&B normal stress 1"] //lahari
+    let rockNorm = ["gameMusic3"] //lahari
+    let classicalNorm = ["gameMusic3"] //lahari
+    let popNorm = ["gameMusic3"] //nithya
+    let hipNorm = ["gameMusic3"] //nithya
+    
+    let rbStress = ["R&B normal stress 1"]
+    let rockStress = ["gameMusic3"]
+    let classicalStress = ["gameMusic3"]
+    let popStress = ["gameMusic3"]
+    let hipStress = ["gameMusic3"]
+    
+    let rbAnxious = ["R&B high stress 1"]
+    let rockAnxious = ["gameMusic3"]
+    let classicalAnxious = ["gameMusic3"]
+    let popAnxious = ["gameMusic3"]
+    let hipAnxious = ["gameMusic3"]
+    
+    var norm: [[String]]?
+    var stress: [[String]]?
+    var anxious: [[String]]?
+    var songs: [[[String]]?]?
     // indices:
     // 0-3 --> normal and classical
     // 4-7 -->
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        norm = [rbNorm, rockNorm, classicalNorm, popNorm, hipNorm]
+        
+        stress = [rbStress, rockStress, classicalStress, popStress, hipStress]
+        
+        anxious = [rbAnxious, rockAnxious, classicalAnxious, popAnxious, hipAnxious]
+        //           normal           stress          anxious
+        songs =  [norm, stress, anxious]// store all 60 audio files in here
        
         let healthStore = HealthKitInterface(self)
         healthStore.readHeartRateData()
@@ -96,21 +133,17 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
     
     func playSong()
     {
-        var songIndex = Int.random(in: 0...2)
+        var songIndex = 2 // stress state
+        let genreIndex = 0 // 0 --> rnb
         
-        /*
         if (state == HeartState.normal) {
-            songIndex = Int.random(in: 0...19)
+            songIndex = 0
         }
         else if (state == HeartState.stressed) {
-            songIndex = Int.random(in: 20...39)
+            songIndex = 1
         }
-        else {
-            songIndex = Int.random(in: 40...59)
-        }
-         */
         
-        let urlString = Bundle.main.path(forResource: songs[songIndex], ofType: "mp3")
+        let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][0], ofType: "mp3") // 0 = song, replace w rando num from 0-3
         
         do {
 
@@ -156,11 +189,13 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
         if(pauseCount%2 == 1)
         {
             sender.image = UIImage(systemName: "play.circle")
+            self.stopStong()
         }
         
         else
         {
             sender.image = UIImage(systemName: "pause.circle")
+            self.playSong()
         }
     }
 }

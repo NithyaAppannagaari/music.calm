@@ -9,6 +9,16 @@ import UIKit
 
 class MusicTuningViewController: UIViewController {
     
+    
+    /*
+     display genres as artist
+     * SZA (R&B)
+     * Queen (rock/metal)
+     * Symphonies (classical)
+     * Adele (pop)
+     * Kendrick Lamar (hip hop)
+     
+     */
     var pauseCount = 0
     @IBOutlet weak var tuningHeartBeat: UIBarButtonItem!
 
@@ -104,11 +114,13 @@ class MusicTuningViewController: UIViewController {
         if(pauseCount%2 == 1)
         {
             sender.image = UIImage(systemName: "play.circle")
+            player?.pause()
         }
         
         else
         {
             sender.image = UIImage(systemName: "pause.circle")
+            player?.play()
         }
     }
     /*

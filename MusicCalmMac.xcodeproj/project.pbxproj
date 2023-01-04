@@ -29,6 +29,8 @@
 		9BB06DE7296018CD00FE6C04 /* Accounts in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06DE6296018CD00FE6C04 /* Accounts */; };
 		9BB06DE9296018D700FE6C04 /* Passwords in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06DE8296018D700FE6C04 /* Passwords */; };
 		9BB06E0429603B9E00FE6C04 /* HealthKitInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB06E0329603B9E00FE6C04 /* HealthKitInterface.swift */; };
+		9BB06E2A2964F51700FE6C04 /* R&B normal stress 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06E282964F51600FE6C04 /* R&B normal stress 1.mp3 */; };
+		9BB06E2C2964F61900FE6C04 /* R&B high stress 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06E2B2964F61900FE6C04 /* R&B high stress 1.mp3 */; };
 		9BC59A2729406E650059F8B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A2629406E650059F8B7 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		9BB06DE8296018D700FE6C04 /* Passwords */ = {isa = PBXFileReference; lastKnownFileType = text; path = Passwords; sourceTree = "<group>"; };
 		9BB06E0329603B9E00FE6C04 /* HealthKitInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitInterface.swift; sourceTree = "<group>"; };
 		9BB06E252963647E00FE6C04 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicCalmMac.app; path = "/Users/nithyaappannagaari/Downloads/MusicCalmMac/build/Debug-iphoneos/MusicCalmMac.app"; sourceTree = "<absolute>"; };
+		9BB06E282964F51600FE6C04 /* R&B normal stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "R&B normal stress 1.mp3"; sourceTree = "<group>"; };
+		9BB06E2B2964F61900FE6C04 /* R&B high stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "R&B high stress 1.mp3"; sourceTree = "<group>"; };
 		9BC59A2629406E650059F8B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9BC59A3229406E670059F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,8 @@
 				9B9499EE2941E43C0081391B /* MusicTuningViewController.swift */,
 				9B9499F42941E52E0081391B /* SignInPageViewController.swift */,
 				9B9499F02941E4780081391B /* WaveViewController.swift */,
+				9BB06E2B2964F61900FE6C04 /* R&B high stress 1.mp3 */,
+				9BB06E282964F51600FE6C04 /* R&B normal stress 1.mp3 */,
 				9B6D48352957C0A700550264 /* coyote */,
 				9B855DF129407DB000EE8490 /* Base.lproj */,
 				9B855DF529407DD500EE8490 /* Main.storyboard */,
@@ -201,6 +207,8 @@
 				9BB06DE9296018D700FE6C04 /* Passwords in Resources */,
 				9BB06DE22960115300FE6C04 /* gameMusic2.mp3 in Resources */,
 				9B855DF829407DD500EE8490 /* Main.storyboard in Resources */,
+				9BB06E2C2964F61900FE6C04 /* R&B high stress 1.mp3 in Resources */,
+				9BB06E2A2964F51700FE6C04 /* R&B normal stress 1.mp3 in Resources */,
 				9B8B4982295C10B00060AB8C /* Coyote-SemiBoldDEMO.otf in Resources */,
 				9B855DF729407DD500EE8490 /* LaunchScreen.storyboard in Resources */,
 				9BB06DE52960145900FE6C04 /* gameMusic3.mp3 in Resources */,
