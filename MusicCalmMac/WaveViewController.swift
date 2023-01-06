@@ -10,35 +10,35 @@ import UIKit
 
 class WaveViewController: UIViewController {
     
-    @IBOutlet weak var calmHeartBeat: UIBarButtonItem!
     var pauseCount = 0
-    var heartCount: Int = 0
-
+  
+    @IBOutlet weak var calmHeartBeat: UIBarButtonItem!
+    
     var timer = Timer()
     
     override func loadView()
     {
         super.loadView()
-        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-                    self.setHeartBeat()
-                }
+    //    timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
+          //          self.setHeartBeat()
+      //          }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
         
-      //  self.setHeartBeat()
-     //   self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
-        //    self.setHeartBeat()
-        //    })
+       self.setHeartBeat()
+       self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
+            self.setHeartBeat()
+            })
 
         // Do any additional setup after loading the view.
     }
     
     // create method that returns the current heartbeat
     
- /*   func setHeartBeat()
+    /*func setHeartBeat()
     {
         calmHeartBeat.title = String(heartBeatNum)
         
@@ -71,23 +71,23 @@ class WaveViewController: UIViewController {
             
             print("title is \(num)")
             
-            if(num < 90) {
+         /*   if(num < 90) {
                 state = HeartState.normal
             }
             
-            else if(num >= 90 && num < 120)
+            else if(num >= 110 && num < 120)
             {
                 state = HeartState.stressed
             }
             
-            else
+            else if(num >= 130)
             {
                 state = HeartState.anxious
-            }
+            }*/
             
-            heartCount+=1
+          //  heartCount+=1
             
-            if(heartCount >= heartBeatNums.count){
+            if(heartCount >= 199){
                 timer.invalidate()
             }
         }

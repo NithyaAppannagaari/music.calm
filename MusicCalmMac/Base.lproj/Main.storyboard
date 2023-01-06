@@ -654,7 +654,7 @@
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="calmHeartBeat" destination="aU1-uP-UVx" id="9Cs-H7-wkj"/>
+                        <outlet property="calmHeartBeat" destination="aU1-uP-UVx" id="aWA-uD-0hH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D9-zc-AHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1073,7 +1073,7 @@
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="tuningHeartBeat" destination="gCR-H5-8t0" id="5ze-6h-6iZ"/>
+                        <outlet property="tuningHeartBeat" destination="gCR-H5-8t0" id="QKZ-jg-69R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGd-3P-rEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

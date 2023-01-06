@@ -21,8 +21,8 @@ class MusicTuningViewController: UIViewController {
      */
     var pauseCount = 0
     @IBOutlet weak var tuningHeartBeat: UIBarButtonItem!
-
-    var heartCount: Int = 0
+    
+   
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -39,9 +39,10 @@ class MusicTuningViewController: UIViewController {
     override func loadView()
     {
         super.loadView()
+        self.setHeartBeat()
         timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-                    self.setHeartBeat()
-                }
+                   self.setHeartBeat()
+               }
     }
     
     
@@ -59,23 +60,23 @@ class MusicTuningViewController: UIViewController {
             
             print("title is \(num)")
             
-            if(num < 90) {
+            /*if(num < 90) {
                 state = HeartState.normal
             }
             
-            else if(num >= 90 && num < 120)
+            else if(num >= 110 && num < 120)
             {
                 state = HeartState.stressed
             }
             
-            else
+            else if(num >= 130)
             {
                 state = HeartState.anxious
-            }
+            }*/
             
-            heartCount+=1
+           // heartCount+=1
             
-            if(heartCount >= heartBeatNums.count){
+            if(heartCount >= 199){
                 timer.invalidate()
             }
         }

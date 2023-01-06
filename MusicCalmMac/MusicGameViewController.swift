@@ -71,12 +71,72 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        inGame = true
         player?.pause()
     }
      
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        HomePageViewController().playSong()
+        inGame = false
+        var songIndex = 2 // stress state
+        
+        /*
+         var genreIndex = 4
+         
+         if(genre == "R&B")
+         {
+         genreIndex = 0
+         }
+         
+         else if(genre == "Rock")
+         {
+         genreIndex = 1
+         }
+         
+         else if(genre == "Classical)
+         {
+         genreIndex = 2
+         }
+         
+         else if(genre == "Pop")
+         {
+         genreIndex = 3
+         }
+         
+         */
+        
+        let genreIndex = 3 // 0 --> rnb
+        
+        if (state == HeartState.normal) {
+            songIndex = 0
+        }
+        else if (state == HeartState.stressed) {
+            songIndex = 1
+        }
+        
+        let randomSongInd = Int.random(in: 0...3)
+        
+        let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+        
+        do {
+            
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
+            }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            player?.delegate = self
+            
+            guard let player = player else {
+                return
+            }
+            
+            player.play()
+        } catch {
+            print("something went wrong")
+        }
     }
     
     

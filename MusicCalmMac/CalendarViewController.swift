@@ -12,8 +12,7 @@ import HealthKit
 class CalendarViewController: UIViewController {
         
     var pauseCount = 0
-    
-    var heartCount: Int = 0
+   
         
     @IBOutlet weak var calendarHeartBeat: UIBarButtonItem!
     
@@ -30,16 +29,17 @@ class CalendarViewController: UIViewController {
       
         // Do any additional setup after loading the view.
     }
-    
+
     override func loadView()
     {
         super.loadView()
+        self.setHeartBeat()
         timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-                    self.setHeartBeat()
-                }
+                   self.setHeartBeat()
+               }
     }
     
-    func setHeartBeat()
+   func setHeartBeat()
     {
        // heartBeat.title = String(heartBeatNum)
         
@@ -53,23 +53,23 @@ class CalendarViewController: UIViewController {
             
             print("title is \(num)")
             
-            if(num < 90) {
+          /*  if(num < 90) {
                 state = HeartState.normal
             }
             
-            else if(num >= 90 && num < 120)
+            else if(num >= 110 && num < 120)
             {
                 state = HeartState.stressed
             }
             
-            else
+            else if(num >= 130)
             {
                 state = HeartState.anxious
             }
+            */
+          //  heartCount+=1
             
-            heartCount+=1
-            
-            if(heartCount >= heartBeatNums.count){
+            if(heartCount >= 199){
                 timer.invalidate()
             }
         }
