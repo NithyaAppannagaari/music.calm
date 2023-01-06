@@ -52,24 +52,22 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
     
   var timerHeart = Timer()
     @IBOutlet weak var heartBeat: UIBarButtonItem!
-    @IBOutlet weak var calendarHeartBeat: UIBarButtonItem!
-    
     // add 3 more songs to each one
-    let rbNorm = ["R&B normal stress 1"] //lahari
-    let rockNorm = ["gameMusic3"] //lahari
-    let classicalNorm = ["gameMusic3"] //lahari
+    let rbNorm = ["R&B normal stress 1","r&b normal 2", "r&b normal 3", "r&b normal 4"] //lahari
+    let rockNorm = ["rock normal 1", "rock normal 2", "rock normal 3", "rock normal 4"] //lahari
+    let classicalNorm = ["classical normal 1", "classical normal 2", "classical normal 3", "classical normal 4"] //lahari
     let popNorm = ["pop normal 1", "pop normal 2", "pop normal 3", "pop normal 4"] //nithya
     let hipNorm = ["Hip normal stress 1", "Hip normal stress 2", "hip-normal-3", "hip normal 4"] //nithya
     
-    let rbStress = ["R&B normal stress 1"]
-    let rockStress = ["gameMusic3"]
-    let classicalStress = ["gameMusic3"]
+    let rbStress = ["R&B normal stress 1", "r&b stress 2", "r&b stress 3", "r&b stress 4"]
+    let rockStress = ["rock stress 1", "rock stress 2", "rock stress 3", "rock stress 4"]
+    let classicalStress = ["classical stress 1", "classical stress 2", "classical stress 3", "classical stress 4"]
     let popStress = ["pop stress 1", "pop stress 2", "pop stress 3", "pop stress 4"]
     let hipStress = ["Hip stress 1", "hip stress 2", "hip stress 3", "hip stress 4"]
     
-    let rbAnxious = ["R&B high stress 1"]
-    let rockAnxious = ["gameMusic3"]
-    let classicalAnxious = ["gameMusic3"]
+    let rbAnxious = ["R&B high stress 1", "r&b anxious 2", "r&b anxious 3", "r&b anxious 4"]
+    let rockAnxious = ["rock anxious 1", "rock anxious 2", "rock anxious 3", "rock anxious 4"]
+    let classicalAnxious = ["classical anxious 1", "classical anxious 2", "classical anxious 3", "classical anxious 4"]
     let popAnxious = ["pop anxious 1", "pop anxious 2", "pop anxious 3", "pop anxious 4"]
     let hipAnxious = ["Hip anxious 1", "hip anxious 2", "hip anxious 3", "hip anxious 4"]
     
@@ -170,32 +168,7 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
         {
             var songIndex = 2 // stress state
             
-            /*
-             var genreIndex = 4
-             
-             if(genre == "R&B")
-             {
-             genreIndex = 0
-             }
-             
-             else if(genre == "Rock")
-             {
-             genreIndex = 1
-             }
-             
-             else if(genre == "Classical)
-             {
-             genreIndex = 2
-             }
-             
-             else if(genre == "Pop")
-             {
-             genreIndex = 3
-             }
-             
-             */
-            
-            let genreIndex = 3 // 0 --> rnb
+            let genreIndex = 2 // 0 --> rnb
             
             if (state == HeartState.normal) {
                 songIndex = 0

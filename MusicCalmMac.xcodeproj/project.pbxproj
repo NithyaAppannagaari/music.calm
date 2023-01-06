@@ -23,6 +23,39 @@
 		9B9499EF2941E43C0081391B /* MusicTuningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9499EE2941E43C0081391B /* MusicTuningViewController.swift */; };
 		9B9499F22941E4780081391B /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9499F02941E4780081391B /* WaveViewController.swift */; };
 		9B9499F52941E52E0081391B /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9499F42941E52E0081391B /* SignInPageViewController.swift */; };
+		9B9CFA1A2968A46000F73F92 /* classical anxious 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA0E2968A45E00F73F92 /* classical anxious 4.mp3 */; };
+		9B9CFA1B2968A46000F73F92 /* classical anxious 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA0F2968A45F00F73F92 /* classical anxious 1.mp3 */; };
+		9B9CFA1C2968A46000F73F92 /* classical anxious 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA102968A45F00F73F92 /* classical anxious 2.mp3 */; };
+		9B9CFA1D2968A46000F73F92 /* classical normal 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA112968A45F00F73F92 /* classical normal 4.mp3 */; };
+		9B9CFA1E2968A46000F73F92 /* classical stress 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA122968A45F00F73F92 /* classical stress 2.mp3 */; };
+		9B9CFA1F2968A46000F73F92 /* classical normal 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA132968A45F00F73F92 /* classical normal 1.mp3 */; };
+		9B9CFA202968A46000F73F92 /* classical normal 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA142968A45F00F73F92 /* classical normal 3.mp3 */; };
+		9B9CFA212968A46000F73F92 /* classical stress 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA152968A45F00F73F92 /* classical stress 1.mp3 */; };
+		9B9CFA222968A46000F73F92 /* classical stress 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA162968A45F00F73F92 /* classical stress 3.mp3 */; };
+		9B9CFA232968A46000F73F92 /* classical stress 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA172968A45F00F73F92 /* classical stress 4.mp3 */; };
+		9B9CFA242968A46000F73F92 /* classical anxious 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA182968A45F00F73F92 /* classical anxious 3.mp3 */; };
+		9B9CFA252968A46000F73F92 /* classical normal 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA192968A45F00F73F92 /* classical normal 2.mp3 */; };
+		9B9CFA292968A47500F73F92 /* r&b anxious 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA262968A47400F73F92 /* r&b anxious 2.mp3 */; };
+		9B9CFA2A2968A47500F73F92 /* r&b anxious 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA272968A47500F73F92 /* r&b anxious 3.mp3 */; };
+		9B9CFA2B2968A47500F73F92 /* r&b anxious 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA282968A47500F73F92 /* r&b anxious 4.mp3 */; };
+		9B9CFA2F2968A47C00F73F92 /* r&b normal 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA2C2968A47C00F73F92 /* r&b normal 3.mp3 */; };
+		9B9CFA302968A47C00F73F92 /* r&b normal 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA2D2968A47C00F73F92 /* r&b normal 4.mp3 */; };
+		9B9CFA312968A47C00F73F92 /* r&b normal 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA2E2968A47C00F73F92 /* r&b normal 2.mp3 */; };
+		9B9CFA412968A48600F73F92 /* rock normal 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA322968A48500F73F92 /* rock normal 4.mp3 */; };
+		9B9CFA422968A48600F73F92 /* rock normal 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA332968A48500F73F92 /* rock normal 3.mp3 */; };
+		9B9CFA432968A48600F73F92 /* rock anxious 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA342968A48500F73F92 /* rock anxious 1.mp3 */; };
+		9B9CFA442968A48700F73F92 /* rock stress 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA352968A48600F73F92 /* rock stress 3.mp3 */; };
+		9B9CFA452968A48700F73F92 /* rock anxious 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA362968A48600F73F92 /* rock anxious 3.mp3 */; };
+		9B9CFA462968A48700F73F92 /* r&b stress 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA372968A48600F73F92 /* r&b stress 3.mp3 */; };
+		9B9CFA472968A48700F73F92 /* rock anxious 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA382968A48600F73F92 /* rock anxious 2.mp3 */; };
+		9B9CFA482968A48700F73F92 /* rock normal 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA392968A48600F73F92 /* rock normal 1.mp3 */; };
+		9B9CFA492968A48700F73F92 /* rock stress 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3A2968A48600F73F92 /* rock stress 2.mp3 */; };
+		9B9CFA4A2968A48700F73F92 /* r&b stress 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3B2968A48600F73F92 /* r&b stress 4.mp3 */; };
+		9B9CFA4B2968A48700F73F92 /* rock stress 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3C2968A48600F73F92 /* rock stress 4.mp3 */; };
+		9B9CFA4C2968A48700F73F92 /* r&b stress 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3D2968A48600F73F92 /* r&b stress 2.mp3 */; };
+		9B9CFA4D2968A48700F73F92 /* rock normal 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3E2968A48600F73F92 /* rock normal 2.mp3 */; };
+		9B9CFA4E2968A48700F73F92 /* rock stress 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA3F2968A48600F73F92 /* rock stress 1.mp3 */; };
+		9B9CFA4F2968A48700F73F92 /* rock anxious 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9CFA402968A48600F73F92 /* rock anxious 4.mp3 */; };
 		9BB06DDB295FF8BF00FE6C04 /* gameMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06DDA295FF8BF00FE6C04 /* gameMusic.mp3 */; };
 		9BB06DE22960115300FE6C04 /* gameMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06DE12960115300FE6C04 /* gameMusic2.mp3 */; };
 		9BB06DE52960145900FE6C04 /* gameMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BB06DE42960145900FE6C04 /* gameMusic3.mp3 */; };
@@ -92,13 +125,46 @@
 		9B9499EE2941E43C0081391B /* MusicTuningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTuningViewController.swift; sourceTree = "<group>"; };
 		9B9499F02941E4780081391B /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		9B9499F42941E52E0081391B /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
+		9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicCalmMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9CFA0E2968A45E00F73F92 /* classical anxious 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA0F2968A45F00F73F92 /* classical anxious 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA102968A45F00F73F92 /* classical anxious 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA112968A45F00F73F92 /* classical normal 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical normal 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA122968A45F00F73F92 /* classical stress 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical stress 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA132968A45F00F73F92 /* classical normal 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical normal 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA142968A45F00F73F92 /* classical normal 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical normal 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA152968A45F00F73F92 /* classical stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical stress 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA162968A45F00F73F92 /* classical stress 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical stress 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA172968A45F00F73F92 /* classical stress 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical stress 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA182968A45F00F73F92 /* classical anxious 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA192968A45F00F73F92 /* classical normal 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical normal 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA262968A47400F73F92 /* r&b anxious 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b anxious 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA272968A47500F73F92 /* r&b anxious 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b anxious 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA282968A47500F73F92 /* r&b anxious 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b anxious 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA2C2968A47C00F73F92 /* r&b normal 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b normal 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA2D2968A47C00F73F92 /* r&b normal 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b normal 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA2E2968A47C00F73F92 /* r&b normal 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b normal 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA322968A48500F73F92 /* rock normal 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock normal 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA332968A48500F73F92 /* rock normal 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock normal 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA342968A48500F73F92 /* rock anxious 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock anxious 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA352968A48600F73F92 /* rock stress 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock stress 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA362968A48600F73F92 /* rock anxious 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock anxious 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA372968A48600F73F92 /* r&b stress 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b stress 3.mp3"; sourceTree = "<group>"; };
+		9B9CFA382968A48600F73F92 /* rock anxious 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock anxious 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA392968A48600F73F92 /* rock normal 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock normal 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA3A2968A48600F73F92 /* rock stress 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock stress 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA3B2968A48600F73F92 /* r&b stress 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b stress 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA3C2968A48600F73F92 /* rock stress 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock stress 4.mp3"; sourceTree = "<group>"; };
+		9B9CFA3D2968A48600F73F92 /* r&b stress 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "r&b stress 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA3E2968A48600F73F92 /* rock normal 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock normal 2.mp3"; sourceTree = "<group>"; };
+		9B9CFA3F2968A48600F73F92 /* rock stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock stress 1.mp3"; sourceTree = "<group>"; };
+		9B9CFA402968A48600F73F92 /* rock anxious 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock anxious 4.mp3"; sourceTree = "<group>"; };
 		9BB06DDA295FF8BF00FE6C04 /* gameMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic.mp3; sourceTree = "<group>"; };
 		9BB06DE12960115300FE6C04 /* gameMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic2.mp3; sourceTree = "<group>"; };
 		9BB06DE42960145900FE6C04 /* gameMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic3.mp3; sourceTree = "<group>"; };
 		9BB06DE6296018CD00FE6C04 /* Accounts */ = {isa = PBXFileReference; lastKnownFileType = text; path = Accounts; sourceTree = "<group>"; };
 		9BB06DE8296018D700FE6C04 /* Passwords */ = {isa = PBXFileReference; lastKnownFileType = text; path = Passwords; sourceTree = "<group>"; };
 		9BB06E0329603B9E00FE6C04 /* HealthKitInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitInterface.swift; sourceTree = "<group>"; };
-		9BB06E252963647E00FE6C04 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicCalmMac.app; path = "/Users/nithyaappannagaari/Downloads/MusicCalmMac/build/Debug-iphoneos/MusicCalmMac.app"; sourceTree = "<absolute>"; };
 		9BB06E282964F51600FE6C04 /* R&B normal stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "R&B normal stress 1.mp3"; sourceTree = "<group>"; };
 		9BB06E2B2964F61900FE6C04 /* R&B high stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "R&B high stress 1.mp3"; sourceTree = "<group>"; };
 		9BB06E2D296676B000FE6C04 /* Hip normal stress 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hip normal stress 1.mp3"; sourceTree = "<group>"; };
@@ -156,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				9BC59A2329406E650059F8B7 /* MusicCalmMac */,
+				9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,7 +258,40 @@
 				9BB06E35296676B100FE6C04 /* Hip anxious 1.mp3 */,
 				9BB06E36296676B100FE6C04 /* hip anxious 2.mp3 */,
 				9BB06E38296676B100FE6C04 /* hip anxious 3.mp3 */,
+				9B9CFA262968A47400F73F92 /* r&b anxious 2.mp3 */,
+				9B9CFA272968A47500F73F92 /* r&b anxious 3.mp3 */,
+				9B9CFA282968A47500F73F92 /* r&b anxious 4.mp3 */,
+				9B9CFA3D2968A48600F73F92 /* r&b stress 2.mp3 */,
+				9B9CFA372968A48600F73F92 /* r&b stress 3.mp3 */,
+				9B9CFA3B2968A48600F73F92 /* r&b stress 4.mp3 */,
+				9B9CFA342968A48500F73F92 /* rock anxious 1.mp3 */,
+				9B9CFA382968A48600F73F92 /* rock anxious 2.mp3 */,
+				9B9CFA362968A48600F73F92 /* rock anxious 3.mp3 */,
+				9B9CFA402968A48600F73F92 /* rock anxious 4.mp3 */,
+				9B9CFA392968A48600F73F92 /* rock normal 1.mp3 */,
+				9B9CFA3E2968A48600F73F92 /* rock normal 2.mp3 */,
+				9B9CFA332968A48500F73F92 /* rock normal 3.mp3 */,
+				9B9CFA322968A48500F73F92 /* rock normal 4.mp3 */,
+				9B9CFA3F2968A48600F73F92 /* rock stress 1.mp3 */,
+				9B9CFA3A2968A48600F73F92 /* rock stress 2.mp3 */,
+				9B9CFA352968A48600F73F92 /* rock stress 3.mp3 */,
+				9B9CFA3C2968A48600F73F92 /* rock stress 4.mp3 */,
 				9BB06E37296676B100FE6C04 /* hip anxious 4.mp3 */,
+				9B9CFA0F2968A45F00F73F92 /* classical anxious 1.mp3 */,
+				9B9CFA2E2968A47C00F73F92 /* r&b normal 2.mp3 */,
+				9B9CFA2C2968A47C00F73F92 /* r&b normal 3.mp3 */,
+				9B9CFA2D2968A47C00F73F92 /* r&b normal 4.mp3 */,
+				9B9CFA102968A45F00F73F92 /* classical anxious 2.mp3 */,
+				9B9CFA182968A45F00F73F92 /* classical anxious 3.mp3 */,
+				9B9CFA0E2968A45E00F73F92 /* classical anxious 4.mp3 */,
+				9B9CFA132968A45F00F73F92 /* classical normal 1.mp3 */,
+				9B9CFA192968A45F00F73F92 /* classical normal 2.mp3 */,
+				9B9CFA142968A45F00F73F92 /* classical normal 3.mp3 */,
+				9B9CFA112968A45F00F73F92 /* classical normal 4.mp3 */,
+				9B9CFA152968A45F00F73F92 /* classical stress 1.mp3 */,
+				9B9CFA122968A45F00F73F92 /* classical stress 2.mp3 */,
+				9B9CFA162968A45F00F73F92 /* classical stress 3.mp3 */,
+				9B9CFA172968A45F00F73F92 /* classical stress 4.mp3 */,
 				9BB06E30296676B000FE6C04 /* hip normal 4.mp3 */,
 				9BB06E2D296676B000FE6C04 /* Hip normal stress 1.mp3 */,
 				9BB06E34296676B100FE6C04 /* Hip normal stress 2.mp3 */,
@@ -234,7 +334,7 @@
 			);
 			name = MusicCalmMac;
 			productName = MusicCalmMac;
-			productReference = 9BB06E252963647E00FE6C04 /* MusicCalmMac.app */;
+			productReference = 9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -275,42 +375,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9CFA2B2968A47500F73F92 /* r&b anxious 4.mp3 in Resources */,
+				9B9CFA292968A47500F73F92 /* r&b anxious 2.mp3 in Resources */,
+				9B9CFA4F2968A48700F73F92 /* rock anxious 4.mp3 in Resources */,
 				9BB06E5529668C4B00FE6C04 /* pop anxious 3.mp3 in Resources */,
+				9B9CFA1A2968A46000F73F92 /* classical anxious 4.mp3 in Resources */,
+				9B9CFA4A2968A48700F73F92 /* r&b stress 4.mp3 in Resources */,
 				9BB06E5629668C4B00FE6C04 /* pop anxious 2.mp3 in Resources */,
+				9B9CFA212968A46000F73F92 /* classical stress 1.mp3 in Resources */,
 				9BB06DE7296018CD00FE6C04 /* Accounts in Resources */,
 				9BB06DE9296018D700FE6C04 /* Passwords in Resources */,
 				9BB06E3F296676B200FE6C04 /* hip stress 3.mp3 in Resources */,
+				9B9CFA482968A48700F73F92 /* rock normal 1.mp3 in Resources */,
 				9BB06E5229668C4B00FE6C04 /* pop normal 3.mp3 in Resources */,
 				9BB06E3A296676B200FE6C04 /* hip stress 2.mp3 in Resources */,
+				9B9CFA432968A48600F73F92 /* rock anxious 1.mp3 in Resources */,
+				9B9CFA412968A48600F73F92 /* rock normal 4.mp3 in Resources */,
 				9BB06E5329668C4B00FE6C04 /* pop stress 4.mp3 in Resources */,
+				9B9CFA4E2968A48700F73F92 /* rock stress 1.mp3 in Resources */,
 				9BB06E3E296676B200FE6C04 /* Hip stress 1.mp3 in Resources */,
 				9BB06E5C29668C4B00FE6C04 /* pop stress 3.mp3 in Resources */,
 				9BB06DE22960115300FE6C04 /* gameMusic2.mp3 in Resources */,
 				9B855DF829407DD500EE8490 /* Main.storyboard in Resources */,
+				9B9CFA472968A48700F73F92 /* rock anxious 2.mp3 in Resources */,
+				9B9CFA4D2968A48700F73F92 /* rock normal 2.mp3 in Resources */,
+				9B9CFA492968A48700F73F92 /* rock stress 2.mp3 in Resources */,
+				9B9CFA1C2968A46000F73F92 /* classical anxious 2.mp3 in Resources */,
+				9B9CFA302968A47C00F73F92 /* r&b normal 4.mp3 in Resources */,
 				9BB06E40296676B200FE6C04 /* Hip normal stress 2.mp3 in Resources */,
 				9BB06E5B29668C4B00FE6C04 /* pop normal 2.mp3 in Resources */,
 				9BB06E39296676B100FE6C04 /* Hip normal stress 1.mp3 in Resources */,
+				9B9CFA232968A46000F73F92 /* classical stress 4.mp3 in Resources */,
 				9BB06E42296676B200FE6C04 /* hip anxious 2.mp3 in Resources */,
+				9B9CFA442968A48700F73F92 /* rock stress 3.mp3 in Resources */,
 				9BB06E3C296676B200FE6C04 /* hip normal 4.mp3 in Resources */,
 				9BB06E43296676B200FE6C04 /* hip anxious 4.mp3 in Resources */,
 				9BB06E2C2964F61900FE6C04 /* R&B high stress 1.mp3 in Resources */,
+				9B9CFA222968A46000F73F92 /* classical stress 3.mp3 in Resources */,
 				9BB06E5A29668C4B00FE6C04 /* pop stress 2.mp3 in Resources */,
+				9B9CFA312968A47C00F73F92 /* r&b normal 2.mp3 in Resources */,
 				9BB06E5129668C4B00FE6C04 /* pop anxious 4.mp3 in Resources */,
+				9B9CFA202968A46000F73F92 /* classical normal 3.mp3 in Resources */,
+				9B9CFA1E2968A46000F73F92 /* classical stress 2.mp3 in Resources */,
+				9B9CFA2A2968A47500F73F92 /* r&b anxious 3.mp3 in Resources */,
 				9BB06E3B296676B200FE6C04 /* hip stress 4.mp3 in Resources */,
 				9BB06E2A2964F51700FE6C04 /* R&B normal stress 1.mp3 in Resources */,
 				9BB06E5829668C4B00FE6C04 /* pop stress 1.mp3 in Resources */,
+				9B9CFA1B2968A46000F73F92 /* classical anxious 1.mp3 in Resources */,
 				9B8B4982295C10B00060AB8C /* Coyote-SemiBoldDEMO.otf in Resources */,
+				9B9CFA1D2968A46000F73F92 /* classical normal 4.mp3 in Resources */,
 				9BB06E3D296676B200FE6C04 /* hip-normal-3.mp3 in Resources */,
 				9B855DF729407DD500EE8490 /* LaunchScreen.storyboard in Resources */,
+				9B9CFA4C2968A48700F73F92 /* r&b stress 2.mp3 in Resources */,
 				9BB06DE52960145900FE6C04 /* gameMusic3.mp3 in Resources */,
+				9B9CFA1F2968A46000F73F92 /* classical normal 1.mp3 in Resources */,
 				9BB06DDB295FF8BF00FE6C04 /* gameMusic.mp3 in Resources */,
 				9BB06E44296676B200FE6C04 /* hip anxious 3.mp3 in Resources */,
 				9BB06E5929668C4B00FE6C04 /* pop normal 1.mp3 in Resources */,
 				9BB06E5729668C4B00FE6C04 /* pop normal 4.mp3 in Resources */,
 				9BB06E41296676B200FE6C04 /* Hip anxious 1.mp3 in Resources */,
+				9B9CFA252968A46000F73F92 /* classical normal 2.mp3 in Resources */,
+				9B9CFA462968A48700F73F92 /* r&b stress 3.mp3 in Resources */,
 				9BB06E5429668C4B00FE6C04 /* pop anxious 1.mp3 in Resources */,
+				9B9CFA4B2968A48700F73F92 /* rock stress 4.mp3 in Resources */,
+				9B9CFA422968A48600F73F92 /* rock normal 3.mp3 in Resources */,
 				9B855DF229407DB000EE8490 /* Base.lproj in Resources */,
+				9B9CFA2F2968A47C00F73F92 /* r&b normal 3.mp3 in Resources */,
 				9B9499E52941E2670081391B /* Assets.xcassets in Resources */,
+				9B9CFA452968A48700F73F92 /* rock anxious 3.mp3 in Resources */,
+				9B9CFA242968A46000F73F92 /* classical anxious 3.mp3 in Resources */,
 				9B8B4983295C10B20060AB8C /* Coyote-SemiBoldDEMO.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -105,7 +105,7 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
          
          */
         
-        let genreIndex = 3 // 0 --> rnb
+        let genreIndex = 2 // 0 --> rnb
         
         if (state == HeartState.normal) {
             songIndex = 0
