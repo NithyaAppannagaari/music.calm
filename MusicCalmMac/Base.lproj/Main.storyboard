@@ -1026,7 +1026,7 @@
         <scene sceneID="EEW-Sv-3UY">
             <objects>
                 <viewController id="puQ-JU-zEY" customClass="MusicTuningViewController" customModule="MusicCalmMac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rRh-Ls-7Nl">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rRh-Ls-7Nl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1044,9 +1044,127 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7lh-dF-ceg">
+                                <rect key="frame" x="143" y="624" width="106.00000000001774" height="60.999999999979764"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="POP">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.60058921580000002" green="0.79512298110000001" blue="0.87437474729999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="31" name="Coyote-SemiBoldDEMO"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="popClicked:" destination="puQ-JU-zEY" eventType="touchUpInside" id="eXy-6h-ldP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYy-Vg-6UZ">
+                                <rect key="frame" x="78" y="283" width="236" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="classical">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.60058921580000002" green="0.79512298110000001" blue="0.87437474729999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="31" name="Coyote-SemiBoldDEMO"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="classicalClicked:" destination="puQ-JU-zEY" eventType="touchUpInside" id="sxL-vk-TRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-yp-TIy">
+                                <rect key="frame" x="131" y="365" width="130" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="rock">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99656999999999996" green="0.98943000000000003" blue="0.86299999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.60058999999999996" green="0.79512000000000005" blue="0.87436999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="31" name="Coyote-SemiBoldDEMO"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rockClicked:" destination="puQ-JU-zEY" eventType="touchUpInside" id="jPm-vZ-KFd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-qF-v1N">
+                                <rect key="frame" x="106" y="449" width="180" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="hip hop">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99656999999999996" green="0.98943000000000003" blue="0.86299999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.60058999999999996" green="0.79512000000000005" blue="0.87436999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="31" name="Coyote-SemiBoldDEMO"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hipClicked:" destination="puQ-JU-zEY" eventType="touchUpInside" id="a79-iv-IC9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGO-OV-wnu">
+                                <rect key="frame" x="145" y="535" width="103" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="R&amp;B">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99656999999999996" green="0.98943000000000003" blue="0.86299999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.60058999999999996" green="0.79512000000000005" blue="0.87436999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="31" name="Coyote-SemiBoldDEMO"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99656790490000002" green="0.98943084479999999" blue="0.86300408839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rbClicked:" destination="puQ-JU-zEY" eventType="touchUpInside" id="4fJ-eZ-zlu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Vl-9p-lzH"/>
                         <color key="backgroundColor" red="0.54117647058823526" green="0.80392156862745101" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7lh-dF-ceg" firstAttribute="centerX" secondItem="6Vl-9p-lzH" secondAttribute="centerX" id="y6u-Y1-Msf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="tou-bD-eOh">
                         <leftBarButtonItems>

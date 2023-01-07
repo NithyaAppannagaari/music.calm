@@ -45,8 +45,8 @@ class CalendarViewController: UIViewController {
         
         print("setting heart beat")
         
-        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
-        {
+       // if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+       // {
             let num = heartBeatNums[heartCount]
             
             calendarHeartBeat?.title = String(num)
@@ -72,7 +72,7 @@ class CalendarViewController: UIViewController {
             if(heartCount >= 199){
                 timer.invalidate()
             }
-        }
+        //}
     }
 
     // create method that returns the current heartbeat

@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class MusicTuningViewController: UIViewController {
+class MusicTuningViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     /*
@@ -52,8 +53,8 @@ class MusicTuningViewController: UIViewController {
         
         print("setting heart beat")
         
-        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
-        {
+      //  if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+   //     {
             let num = heartBeatNums[heartCount]
             
             tuningHeartBeat?.title = String(num)
@@ -79,8 +80,225 @@ class MusicTuningViewController: UIViewController {
             if(heartCount >= 199){
                 timer.invalidate()
             }
-        }
+      //  }
     }
+    
+    
+    @available(iOS 13.0, *)
+    @IBAction func popClicked(_ sender: UIButton) {
+        
+        if(genreIndex != 3)
+            
+        {
+            genreIndex = 3
+            
+            player?.stop()
+            
+            var songIndex = 2
+            if (state == HeartState.normal) {
+                songIndex = 0
+            }
+            else if (state == HeartState.stressed) {
+                songIndex = 1
+            }
+            
+            let randomSongInd = Int.random(in: 0...3)
+            
+            let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+            
+            do {
+                
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                player?.delegate = self
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
+            } catch {
+                print("something went wrong")
+            }
+        }
+        
+        //HomePageViewController().playSong()
+    }
+    @available(iOS 13.0, *)
+    @IBAction func classicalClicked(_ sender: UIButton) {
+        if(genreIndex != 2)
+        {
+            genreIndex = 2
+            player?.stop()
+            
+            var songIndex = 2
+            if (state == HeartState.normal) {
+                songIndex = 0
+            }
+            else if (state == HeartState.stressed) {
+                songIndex = 1
+            }
+            
+            let randomSongInd = Int.random(in: 0...3)
+            
+            let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+            
+            do {
+                
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                player?.delegate = self
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
+            } catch {
+                print("something went wrong")
+            }
+        }
+        
+       
+       // HomePageViewController().playSong()
+    }
+    @available(iOS 13.0, *)
+    @IBAction func rockClicked(_ sender: Any) {
+        if(genreIndex != 1)
+        {
+            genreIndex = 1
+            player?.stop()
+            
+            var songIndex = 2
+            if (state == HeartState.normal) {
+                songIndex = 0
+            }
+            else if (state == HeartState.stressed) {
+                songIndex = 1
+            }
+            
+            let randomSongInd = Int.random(in: 0...3)
+            
+            let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+            
+            do {
+                
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                player?.delegate = self
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
+            } catch {
+                print("something went wrong")
+            }
+            
+        }
+      
+      //  HomePageViewController().playSong()
+    }
+    @available(iOS 13.0, *)
+    @IBAction func hipClicked(_ sender: UIButton) {
+        if(genreIndex != 4)
+        {
+            genreIndex = 4
+            player?.stop()
+            
+            var songIndex = 2
+            if (state == HeartState.normal) {
+                songIndex = 0
+            }
+            else if (state == HeartState.stressed) {
+                songIndex = 1
+            }
+            
+            let randomSongInd = Int.random(in: 0...3)
+            
+            let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+            
+            do {
+                
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                player?.delegate = self
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
+            } catch {
+                print("something went wrong")
+            }
+        }
+      //  HomePageViewController().playSong()
+    }
+    @available(iOS 13.0, *)
+    @IBAction func rbClicked(_ sender: Any) {
+        if(genreIndex != 0)
+        {
+            genreIndex = 0
+            player?.stop()
+            
+            var songIndex = 2
+            if (state == HeartState.normal) {
+                songIndex = 0
+            }
+            else if (state == HeartState.stressed) {
+                songIndex = 1
+            }
+            
+            let randomSongInd = Int.random(in: 0...3)
+            
+            let urlString = Bundle.main.path(forResource: songs?[songIndex]?[genreIndex][randomSongInd], ofType: "mp3")
+            
+            do {
+                
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                player?.delegate = self
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
+            } catch {
+                print("something went wrong")
+            }
+        }
+       // HomePageViewController().playSong()
+    }
+    
+    
     
     // create method that returns the current heartbeat
     

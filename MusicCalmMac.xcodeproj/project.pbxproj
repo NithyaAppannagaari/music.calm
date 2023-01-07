@@ -125,7 +125,7 @@
 		9B9499EE2941E43C0081391B /* MusicTuningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTuningViewController.swift; sourceTree = "<group>"; };
 		9B9499F02941E4780081391B /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		9B9499F42941E52E0081391B /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
-		9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicCalmMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicCalmMac.app; path = "/Users/nithyaappannagaari/Downloads/MusicCalmMac/build/Debug-iphoneos/MusicCalmMac.app"; sourceTree = "<absolute>"; };
 		9B9CFA0E2968A45E00F73F92 /* classical anxious 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 4.mp3"; sourceTree = "<group>"; };
 		9B9CFA0F2968A45F00F73F92 /* classical anxious 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 1.mp3"; sourceTree = "<group>"; };
 		9B9CFA102968A45F00F73F92 /* classical anxious 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "classical anxious 2.mp3"; sourceTree = "<group>"; };
@@ -222,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				9BC59A2329406E650059F8B7 /* MusicCalmMac */,
-				9B9CFA0D2966B46C00F73F92 /* MusicCalmMac.app */,
 			);
 			sourceTree = "<group>";
 		};

@@ -13,6 +13,8 @@ enum HeartState {
     case anxious, stressed, normal
 }
 
+var genreIndex = 2
+
 var prevState = HeartState.stressed
 var state = HeartState.stressed
 
@@ -90,8 +92,10 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
         //           normal           stress          anxious
         songs =  [norm, stress, anxious]// store all 60 audio files in here
        
+      //  let healthStore = HealthKitInterface(self)
+     //   healthStore.readHeartRateData()
         let healthStore = HealthKitInterface(self)
-        healthStore.readHeartRateData()
+        healthStore.getCurrentHeartRateData()
         self.setHeartBeat()
         playSong()
         timerHeart = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
@@ -154,7 +158,13 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
         if(stateHasChanged() && !inGame)
         {
             // add transition
-            self.playSong()
+            player?.setVolume(0, fadeDuration: TimeInterval(6))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                print("waited 6 seconds")
+                player?.setVolume(3, fadeDuration: 5)
+                self.playSong()
+            }
+            
         }
     }
     
@@ -168,7 +178,7 @@ class HomePageViewController: UIViewController, AVAudioPlayerDelegate{
         {
             var songIndex = 2 // stress state
             
-            let genreIndex = 2 // 0 --> rnb
+            
             
             if (state == HeartState.normal) {
                 songIndex = 0

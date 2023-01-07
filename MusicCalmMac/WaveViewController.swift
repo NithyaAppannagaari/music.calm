@@ -63,8 +63,8 @@ class WaveViewController: UIViewController {
         
         print("setting heart beat")
         
-        if(heartBeatNums != nil && !heartBeatNums.isEmpty)
-        {
+       // if(heartBeatNums != nil && !heartBeatNums.isEmpty)
+      //  {
             let num = heartBeatNums[heartCount]
             
             calmHeartBeat?.title = String(num)
@@ -90,7 +90,7 @@ class WaveViewController: UIViewController {
             if(heartCount >= 199){
                 timer.invalidate()
             }
-        }
+       // }
     }
     
     @IBAction func openInsta(_ sender: UIBarButtonItem) {

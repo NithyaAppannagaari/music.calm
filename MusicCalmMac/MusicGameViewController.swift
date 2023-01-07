@@ -105,7 +105,6 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
          
          */
         
-        let genreIndex = 2 // 0 --> rnb
         
         if (state == HeartState.normal) {
             songIndex = 0
@@ -171,8 +170,11 @@ class MusicGameViewController: UIViewController, AVAudioPlayerDelegate {
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
     {
-        resetGreens()
-        playSong()
+        if(inGame)
+        {
+            resetGreens()
+            self.playSong()
+        }
     }
     
     //resetting the piano key back to normal design
